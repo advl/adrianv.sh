@@ -9,7 +9,11 @@ const SelectMenu = () => {
   const history = useHistory()
 
   const handleSelect = item => {
-    history.push(item.value)
+    if (item.value.startsWith('$')) {
+      history.goBack()
+    } else {
+      history.push(item.value)
+    }
     // `item` = { label: 'First', value: 'first' }
   }
 
@@ -29,6 +33,10 @@ const SelectMenu = () => {
     {
       label:'See picture',
       value:'/picture'
+    },
+    {
+      label:'Go Back 1 Page',
+      value:'$goback'
     }
   ]
 
