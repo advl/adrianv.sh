@@ -1,13 +1,13 @@
 {
 	"name": "adrianv.sh",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"license": "MIT",
 	"bin": "main.js",
 	"engines": {
 		"node": ">=10"
 	},
 	"scripts": {
-    "prepublish":"npm run build",
+		"prepublish": "npm run build",
 		"start": "node cli.js",
 		"build": "webpack --config ./webpack.js",
 		"test-eslint": "eslint ui.js",
