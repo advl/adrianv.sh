@@ -20,8 +20,8 @@ module.exports = {
   plugins:[
     'react-hooks',
   ],
-  //'parser': 'babel-eslint',
-  rules:{
+  parser:'babel-eslint',
+  rules :{
     'indent':[
       'error',
       2,

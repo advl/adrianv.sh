@@ -1,0 +1,2 @@
+#!/usr/bin/env node
+module.exports=(()=>{"use strict";var e={108:(e,r,t)=>{var n=t(297),s=t(773),a=t(581).render,o=t(805),i=s("./ui"),p=o("\n\tUsage\n\t  $ adrianv.sh\n\n\tOptions\n\t\t--name  Your name\n\n\tExamples\n\t  $ adrianv.sh --name=Jane\n\t  Hello, Jane\n");a(n.createElement(i,p.flags))},773:e=>{e.exports=require("import-jsx")},581:e=>{e.exports=require("ink")},805:e=>{e.exports=require("meow")},297:e=>{e.exports=require("react")}},r={};return function t(n){if(r[n])return r[n].exports;var s=r[n]={exports:{}};return e[n](s,s.exports,t),s.exports}(108)})();
