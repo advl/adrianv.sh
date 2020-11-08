@@ -4,7 +4,7 @@ module.exports = function (api) {
   //api.cache(false)
 
   let isProd = api.cache(() => process.env.NODE_ENV === 'production')
-  console.log(`OK => Compiling in Babel for production=${isProd}`)
+  //console.log(`OK => Compiling in Babel for production=${isProd}`)
 
   const presets = [
     [
@@ -36,6 +36,7 @@ module.exports = function (api) {
       {
         extensions:[
           '.html',
+          '.txt',
           '.xml',
           '.graphql',
           '.gql'
