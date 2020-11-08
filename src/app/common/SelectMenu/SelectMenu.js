@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import SelectInput from 'ink-select-input'
 
-import { useHistory } from '../Router'
+import { useHistory } from 'react-router'
 
 const SelectMenu = () => {
   

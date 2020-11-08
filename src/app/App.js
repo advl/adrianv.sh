@@ -3,12 +3,14 @@ import packageInfo from '../../package.json'
 import { Text, Box, Newline } from 'ink'
 import { 
   Picture,
-  Router,
-  Switch,
-  Route,
   SelectMenu
 } from 'app/common'
 
+import {
+  MemoryRouter as Router,
+  Route,
+  Switch
+} from 'react-router'
 
 import {
   PhotoPage,
