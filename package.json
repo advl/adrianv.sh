@@ -1,14 +1,14 @@
 {
 	"name": "adrianv.sh",
-	"version": "0.0.0",
+	"version": "0.0.4",
 	"license": "MIT",
 	"bin": "cli.js",
 	"engines": {
 		"node": ">=10"
 	},
 	"scripts": {
-    "start":"node cli.js",
-    "test-eslint": "eslint ui.js",
+		"start": "node cli.js",
+		"test-eslint": "eslint ui.js",
 		"test": "xo && ava"
 	},
 	"files": [
