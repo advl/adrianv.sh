@@ -23,6 +23,10 @@ const SelectMenu = () => {
       value:'/home'
     },
     {
+      label:'Professional Experience',
+      value:'/experience'
+    },
+    {
       label:'See picture',
       value:'/picture'
     }
