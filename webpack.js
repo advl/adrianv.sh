@@ -39,7 +39,7 @@ module.exports = {
   },
 
   entry:[
-    path.resolve(path.join(__dirname, 'cli.js'))
+    path.resolve(path.join(__dirname, 'src/cli.js'))
     //path.resolve(path.join(__dirname, 'src/renderer.js'))
   ],
 
