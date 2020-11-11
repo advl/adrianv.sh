@@ -1,7 +1,7 @@
 import React from 'react'
 import {render} from 'ink'
 import meow from 'meow'
-import App from 'app/App'
+import BaseApp from 'app/BaseApp'
 
 const cli = meow(`
 	Usage
@@ -15,4 +15,4 @@ const cli = meow(`
 	  Hello, Jane
 `)
 
-render(React.createElement(App, cli.flags))
+render(React.createElement(BaseApp, cli.flags))

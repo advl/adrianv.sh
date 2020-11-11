@@ -3,11 +3,9 @@ import packageInfo from '../../package.json'
 import { Text, Box, Newline } from 'ink'
 import { 
   Picture,
-  SelectMenu
 } from 'app/common'
 
 import {
-  MemoryRouter as Router,
   Route,
   Switch
 } from 'react-router'
@@ -15,6 +13,7 @@ import {
 import {
   PhotoPage,
   TestPage,
+  ColorChoicePage,
   ExperienceMainPage
 } from 'app/pages'
 
@@ -22,9 +21,13 @@ export default (props) => {
   //
 
   return(
-    <Router>
+    <>
+      {/*
       <Switch>
-        <Route path='/' exact>
+        <Route
+          path='/'
+          exact
+        >
           <Box
             borderStyle='round'
             padding='2'
@@ -78,8 +81,8 @@ export default (props) => {
           <ExperienceMainPage/>
         </Route>
       </Switch>
-        <TestPage></TestPage>
-      <SelectMenu/>
-    </Router>
+      */}
+      <ColorChoicePage/>
+    </>
   )
 } 

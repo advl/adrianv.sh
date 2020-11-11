@@ -18,6 +18,7 @@
 		"ui.js"
 	],
 	"dependencies": {
+		"figures": "^3.2.0",
 		"history": "^5.0.0",
 		"import-jsx": "^4.0.0",
 		"ink": "^3.0.8",

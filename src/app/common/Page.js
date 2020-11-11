@@ -4,7 +4,7 @@ import { Text, Newline } from 'ink'
 import BigText from 'ink-big-text'
 import Gradient from 'ink-gradient'
 
-
+import { useSettings } from 'app/common'
 /*
 fonts :[
   'block',//2
@@ -30,17 +30,22 @@ const Page = ({
   children,
 
 }) => {
+
+  const { 
+    color,
+    gradient
+  } = useSettings()
   //
   return (
     <>
-      { (title && titleGradient) &&
-      <Gradient name={ titleGradient }>
+      { (title && (gradient || titleGradient)) &&
+      <Gradient name={ titleGradient || gradient }>
         <BigText font={ titleFont } text={ title }/>
       </Gradient>
       }
-      { (title && !titleGradient) && 
+      { (title && !(gradient || titleGradient)) && 
         <BigText font={ titleFont } text={ title }
-          colors={['green', 'red']}/>
+          colors={[color, 'gray']}/>
       }
       { children }
       <Newline count={ 1 }/>
@@ -51,7 +56,7 @@ const Page = ({
 
 Page.defaultProps = {
   titleFont:'3d',
-  titleGradient:'passion'
+  //titleGradient:'passion'
 }
 
 export default Page
