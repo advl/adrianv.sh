@@ -1,6 +1,7 @@
 import * as React from 'react'
 import packageInfo from '../../package.json'
 import { Text, Box, Newline } from 'ink'
+import { useLocation } from 'react-router'
 import { 
   Picture,
 } from 'app/common'
@@ -11,19 +12,26 @@ import {
 } from 'react-router'
 
 import {
+  HomePage,
+  EducationMainPage,
+  ExperienceMainPage,
+  MiscMainPage,
   PhotoPage,
   TestPage,
+  OSSPage,
   ColorChoicePage,
-  ExperienceMainPage
 } from 'app/pages'
 
 export default (props) => {
   //
+  //
+  const location = useLocation()
 
   return(
     <>
-      {/*
+      <Text>{location.pathname}</Text>
       <Switch>
+        {/*
         <Route
           path='/'
           exact
@@ -68,21 +76,53 @@ export default (props) => {
           </Box>
 
         </Route>
-        <Route path='/home'>
-          <Text>Hello from route</Text>
+      */}
+        <Route
+          path='/'
+          exact
+        >
+          <HomePage />
         </Route>
-        <Route path='/heythere'>
-          <Text>Hello from 2222</Text>
+        <Route
+          path='/education'
+          exact
+        >
+          <EducationMainPage/>
         </Route>
-        <Route path='/picture'>
-          <PhotoPage/>
+        <Route
+          path='/experience'
+          exact
+        >
+          <ExperienceMainPage/>
+        </Route>
+        <Route
+          path='/oss'
+          exact
+        >
+          <OSSPage/>
+        </Route>
+        <Route
+          path='/misc'
+          exact
+        >
+          <MiscMainPage />
+        </Route>
+        <Route
+          path='/picture'
+          exact
+        >
+          <PhotoPage />
+        </Route>
+        <Route
+          path='/colors'
+          exact
+        >
+          <ColorChoicePage/>
         </Route>
         <Route path='/experience'>
           <ExperienceMainPage/>
         </Route>
       </Switch>
-      */}
-      <ColorChoicePage/>
     </>
   )
 } 

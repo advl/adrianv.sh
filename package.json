@@ -27,6 +27,7 @@
 		"ink-link": "^2.0.0",
 		"ink-select-input": "^4.2.0",
 		"meow": "^8.0.0",
+		"open": "^7.3.0",
 		"path-to-regexp": "^6.2.0",
 		"react": "^17.0.1",
 		"react-router": "^5.2.0"

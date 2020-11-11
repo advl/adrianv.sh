@@ -1,7 +1,9 @@
+
 import * as React from 'react'
 
 import { Text, Box, useApp } from 'ink'
-import { Picture } from 'app/common'
+
+import open from 'open'
 
 import * as figures from 'figures'
 
@@ -15,7 +17,9 @@ import {
   useHistory 
 } from 'react-router'
 
-const Photo = (props) => {
+const OSS = (props) => {
+
+  const {exit} = useApp();
 
   const history = useHistory()
 
@@ -26,11 +30,15 @@ const Photo = (props) => {
 
   const items = [
     {
-      label:'Wait... what ?',
-      value:'/picture'
+      label:'Tell me more of ...',
+      value:'/education'
     },
     {
-      label:`${figures.arrowLeft} I've seen enough. (Return to hidden menu)`,
+      label:'Open Swatch in browser (will detect your default web browser)',
+      value:'https://swatch.dev'
+    },
+    {
+      label:`${figures.arrowLeft} Return to main menu`,
       value:'~'
     }
   ]
@@ -38,8 +46,9 @@ const Photo = (props) => {
   const handleSelect = item => {
     if (item.value.startsWith('/')) {
       history.push(item.value)
-    } else if (item.value.startsWith('~')) {
-      history.goBack()
+    } else if (item.value.startsWith('http')) {
+      const opn = async () => await open(item.value)
+      opn()
     } else {
       setSettings({
         color:item.value,
@@ -50,9 +59,8 @@ const Photo = (props) => {
   }
 
   return (
-    <Page 
+    <Page title='Open Source Projects' titleFont='tiny'
     >
-    <Picture/>
       <Text>Menu.</Text>
       <ColorSelectInput
         items={ items }
@@ -63,4 +71,4 @@ const Photo = (props) => {
   )
 }
 
-export default Photo
+export default OSS

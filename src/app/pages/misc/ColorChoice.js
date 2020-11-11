@@ -12,6 +12,8 @@ import {
   useHistory 
 } from 'react-router'
 
+import * as figures from 'figures'
+
 const ColorChoice = (props) => {
 
   const history = useHistory()
@@ -55,14 +57,16 @@ const ColorChoice = (props) => {
       value:'^'
     },
     {
-      label:'Ok, good to go !',
-      value:'/'
+      label:`${figures.arrowLeft} Ok, good to go. (Return to hidden menu).`,
+      value:'~'
     }
   ]
 
   const handleSelect = item => {
     if (item.value.startsWith('/')) {
       history.push(item.value)
+    } else if (item.value.startsWith('~')) {
+      history.goBack()
     } else if (item.value.startsWith('^')) {
       setSettings({
         color:undefined,

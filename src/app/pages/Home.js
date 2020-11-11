@@ -1,7 +1,7 @@
+
 import * as React from 'react'
 
 import { Text, Box, useApp } from 'ink'
-import { Picture } from 'app/common'
 
 import * as figures from 'figures'
 
@@ -15,7 +15,9 @@ import {
   useHistory 
 } from 'react-router'
 
-const Photo = (props) => {
+const Home = (props) => {
+
+  const {exit} = useApp();
 
   const history = useHistory()
 
@@ -26,20 +28,32 @@ const Photo = (props) => {
 
   const items = [
     {
-      label:'Wait... what ?',
-      value:'/picture'
+      label: 'Experience',
+      value:'/experience'
     },
     {
-      label:`${figures.arrowLeft} I've seen enough. (Return to hidden menu)`,
-      value:'~'
+      label:'Education',
+      value:'/education'
+    },
+    {
+      label:'Open Source Projects',
+      value:'/oss'
+    },
+    {
+      label:`${figures.warning} Do not select this`,
+      value:'/misc'
+    },
+    {
+      label:'Exit application',
+      value:'quit'
     }
   ]
 
   const handleSelect = item => {
     if (item.value.startsWith('/')) {
       history.push(item.value)
-    } else if (item.value.startsWith('~')) {
-      history.goBack()
+    } else if (item.value === 'quit') {
+      exit()
     } else {
       setSettings({
         color:item.value,
@@ -50,9 +64,8 @@ const Photo = (props) => {
   }
 
   return (
-    <Page 
+    <Page title='Welcome' //titleFont='block'
     >
-    <Picture/>
       <Text>Menu.</Text>
       <ColorSelectInput
         items={ items }
@@ -63,4 +76,4 @@ const Photo = (props) => {
   )
 }
 
-export default Photo
+export default Home
