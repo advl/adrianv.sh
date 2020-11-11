@@ -47,8 +47,7 @@ const OSS = (props) => {
     if (item.value.startsWith('/')) {
       history.push(item.value)
     } else if (item.value.startsWith('http')) {
-      const opn = async () => await open(item.value)
-      opn()
+      open(item.value)
     } else {
       setSettings({
         color:item.value,
