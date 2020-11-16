@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import { useMemo } from 'react'
+
 import { Text, Box } from 'ink'
 
 import { 
@@ -11,6 +13,8 @@ import {
 import { 
   useHistory 
 } from 'react-router'
+
+import { shuffleArray } from 'utils'
 
 import * as figures from 'figures'
 
@@ -34,24 +38,44 @@ const ColorChoice = (props) => {
     'rainbow',
     'passion'
   ]
+
+  const colorItems = useMemo(() => {
+    const allColors = [
+      {
+        label:'Blue',
+        value:'blue'
+      },
+      {
+        label:'Green',
+        value:'green'
+      },
+      {
+        label:'Red',
+        value:'red'
+      },
+      { 
+        label:'Yellow',
+        value:'yellow'
+      },
+      { 
+        label:'Magenta',
+        value:'magenta'
+      },
+      { 
+        label:'Cyan',
+        value:'cyan'
+      },
+    ]
+    return shuffleArray(allColors).slice(0,3).sort((a, b) => {
+      const currentColor = a.value === color
+      console.log(currentColor, a.value, color)
+      return !currentColor ? a : b
+    })
+
+  }, [])
   
   const items = [
-    {
-      label:'Green',
-      value:'green'
-    },
-    {
-      label:'Red',
-      value:'red'
-    },
-    {
-      label:'Blue',
-      value:'blue'
-    },
-    { 
-      label:'Yellow',
-      value:'yellow'
-    },
+    ...colorItems,
     { 
       label:'(ง ͡ʘ ͜ʖ ͡ʘ)ง Special Premium └(=^‥^=)┐',
       value:'^'
@@ -69,12 +93,12 @@ const ColorChoice = (props) => {
       history.goBack()
     } else if (item.value.startsWith('^')) {
       setSettings({
-        color:undefined,
+        color   :undefined,
         gradient:gradients[Math.floor(Math.random() * gradients.length)]
       })
     } else {
       setSettings({
-        color:item.value,
+        color   :item.value,
         gradient:undefined
       })
     }
@@ -82,7 +106,10 @@ const ColorChoice = (props) => {
   }
 
   return (
-    <Page title='colors' titleFont='block'>
+    <Page
+      title='colors'
+      titleFont='block'
+    >
       <Text>Please choose your favourite color.</Text>
       <ColorSelectInput
         items={ items }

@@ -1,6 +1,7 @@
 import * as React from 'react'
+import { useEffect } from 'react'
 
-import { Text, Box, useApp } from 'ink'
+import { Text, Box, useApp, useStdout } from 'ink'
 
 import * as figures from 'figures'
 
@@ -17,6 +18,12 @@ import {
 const Main = (props) => {
 
   const history = useHistory()
+
+  const {write} = useStdout()
+
+  useEffect(() => {
+    write('\n') //This is require bc on return from the picture the menu doesn't load otherwise
+  }, [])
 
   const { 
     color,
@@ -45,7 +52,7 @@ const Main = (props) => {
       history.goBack()
     } else {
       setSettings({
-        color:item.value,
+        color   :item.value,
         gradient:undefined
       })
     }
@@ -53,7 +60,9 @@ const Main = (props) => {
   }
 
   return (
-    <Page title='Special Menu' titleFont='tiny'
+    <Page
+      title='Special Menu'
+      titleFont='tiny'
     >
       <Text>Menu.</Text>
       <ColorSelectInput
