@@ -40,6 +40,10 @@ const Main = (props) => {
       value:'/colors'
     },
     {
+      label:'Source',
+      value:'/source'
+    },
+    {
       label:`${figures.arrowLeft} Never mind. (Return to main menu)`,
       value:'~'
     }
@@ -64,7 +68,7 @@ const Main = (props) => {
       title='Special Menu'
       titleFont='tiny'
     >
-      <Text>Menu.</Text>
+      <Text bold>You've stumbled upon a door where your mind is the key.</Text>
       <ColorSelectInput
         items={ items }
         onSelect={ handleSelect }

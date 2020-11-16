@@ -17,6 +17,7 @@ import {
   ExperienceMainPage,
   MiscMainPage,
   PhotoPage,
+  SourcePage,
   TestPage,
   OSSPage,
   ColorChoicePage,
@@ -112,6 +113,12 @@ export default (props) => {
           exact
         >
           <PhotoPage />
+        </Route>
+        <Route
+          path='/source'
+          exact
+        >
+          <SourcePage />
         </Route>
         <Route
           path='/colors'

@@ -1,7 +1,7 @@
 import * as React from 'react'
 
-import { Text, Box, useApp } from 'ink'
-import { Picture } from 'app/common'
+import { Text, Box, useApp, useInput, Newline } from 'ink'
+import { Picture, ColoredText } from 'app/common'
 
 import * as figures from 'figures'
 
@@ -35,6 +35,14 @@ const Photo = (props) => {
     }
   ]
 
+  useInput((input, key) => {
+    if (key.return) {
+      history.goBack()
+      // Exit program
+    }
+
+  })
+
   const handleSelect = item => {
     if (item.value.startsWith('/')) {
       history.push(item.value)
@@ -42,7 +50,7 @@ const Photo = (props) => {
       history.goBack()
     } else {
       setSettings({
-        color:item.value,
+        color   :item.value,
         gradient:undefined
       })
     }
@@ -50,14 +58,19 @@ const Photo = (props) => {
   }
 
   return (
-    <Page 
-    >
-    <Picture/>
-      <Text>Menu.</Text>
+    <Page >
+      <Picture/>
+      <Text>
+~~ Your humble servant circa 1996 ~~
+        <Newline/>
+      </Text>
+
+      <ColoredText bold>You've seen enough. Press [ENTER] to go back to the hidden menu.</ColoredText>
+      {/*}
       <ColorSelectInput
         items={ items }
         onSelect={ handleSelect }
-      />
+      />*/}
     </Page>
 
   )

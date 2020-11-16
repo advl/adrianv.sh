@@ -1,4 +1,5 @@
 export { default as Picture } from './Picture.js'
 export { default as Page } from './Page'
+export { default as ColoredText } from './ColoredText'
 export * from './Settings'
 export * from './SelectInput'
