@@ -5,6 +5,7 @@ import { Text, Box, Newline, useStdout } from 'ink'
 import { useLocation } from 'react-router'
 import { 
   Picture,
+  useSettings,
 } from 'app/common'
 
 import {
@@ -24,22 +25,16 @@ import {
   ColorChoicePage,
 } from 'app/pages'
 
-import ReactGA from 'react-ga'
-
 export default (props) => {
   //
   //
   const location = useLocation()
   const {write} = useStdout()
+  const { visitor } = useSettings()
 
 
   useEffect(() => {
-    ReactGA.pageview(location.pathname + location.search)
-    write(location.pathname)
-    ReactGA.event({
-      category:'User',
-      action  :'Created an Account'
-    })
+    visitor.pageview(location.pathname + location.search).send()
   }, [location.pathname])
 
 

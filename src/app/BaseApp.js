@@ -1,5 +1,5 @@
 import * as React from 'react'
-import ReactGA from 'react-ga'
+import ua from 'universal-analytics'
 
 import { 
   SettingsContextProvider,
@@ -11,7 +11,7 @@ import {
 
 import App from './App'
 
-ReactGA.initialize('UA-51857966-4', { debug: true })
+var visitor = ua('UA-51857966-4')
 
 
 export default (props) => {
@@ -19,7 +19,9 @@ export default (props) => {
 
   return(
     <MemoryRouter>
-      <SettingsContextProvider>
+      <SettingsContextProvider
+        visitor={ visitor }
+      >
         <App />
       </SettingsContextProvider>
     </MemoryRouter>

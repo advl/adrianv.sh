@@ -35,6 +35,7 @@ const SettingsContextProvider = ({ children, ...props }) => {
     <SettingsContext.Provider
       value={{
         ...state,
+        ...props,
         setSettings
       }}
     >
