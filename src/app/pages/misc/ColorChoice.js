@@ -68,7 +68,6 @@ const ColorChoice = (props) => {
     ]
     return shuffleArray(allColors).slice(0,3).sort((a, b) => {
       const currentColor = a.value === color
-      console.log(currentColor, a.value, color)
       return !currentColor ? a : b
     })
 

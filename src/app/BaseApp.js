@@ -1,4 +1,5 @@
 import * as React from 'react'
+import ReactGA from 'react-ga'
 
 import { 
   SettingsContextProvider,
@@ -9,6 +10,9 @@ import {
 } from 'react-router'
 
 import App from './App'
+
+ReactGA.initialize('UA-51857966-4', { debug: true })
+
 
 export default (props) => {
   //

@@ -1,6 +1,7 @@
 import * as React from 'react'
+import { useEffect } from 'react'
 import packageInfo from '../../package.json'
-import { Text, Box, Newline } from 'ink'
+import { Text, Box, Newline, useStdout } from 'ink'
 import { useLocation } from 'react-router'
 import { 
   Picture,
@@ -23,10 +24,24 @@ import {
   ColorChoicePage,
 } from 'app/pages'
 
+import ReactGA from 'react-ga'
+
 export default (props) => {
   //
   //
   const location = useLocation()
+  const {write} = useStdout()
+
+
+  useEffect(() => {
+    ReactGA.pageview(location.pathname + location.search)
+    write(location.pathname)
+    ReactGA.event({
+      category:'User',
+      action  :'Created an Account'
+    })
+  }, [location.pathname])
+
 
   return(
     <>
