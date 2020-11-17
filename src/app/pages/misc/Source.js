@@ -210,7 +210,7 @@ tag, a JS template literal should be used.
             {' '}
 for his OSS work, in particular his ink components, such as `ink-big-text`, `ink-link`, `ink-gradient`.
             <Newline/>
-            Not very surprisingly, url-based navigation can be emulated in the terminal using
+            PRedictably, url-based navigation can be emulated in the terminal using
             <Newline count={ 1 }/>
             <ColoredText>
               {"import { MemoryRouter } from 'react-router'"}
@@ -256,7 +256,7 @@ and feel free to fork this project to modify the source code in the way you see 
         width={120}
         padding={ 3 }
         justifyContent='center'
-        key={ 'source' }
+        key={ 'thanks' }
       >
         <ColoredText bold>
 ~~~ Thank you for browsing
