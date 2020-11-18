@@ -1,4 +1,3 @@
-import packageInfo from '../../../../package.json'
 import * as React from 'react'
 import { useEffect } from 'react'
 
@@ -36,6 +35,8 @@ const Main = (props) => {
   const { 
     color,
     gradient,
+    version,
+    name,
     setSettings
   } = useSettings()
 
@@ -70,7 +71,7 @@ const Main = (props) => {
     // `item` = { label: 'First', value: 'first' }
   }
 
-  const title = `${packageInfo.name} ${packageInfo.version}`
+  const title = `${name} ${version}`
 
   return (
     <Page >

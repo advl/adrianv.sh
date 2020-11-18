@@ -1,3 +1,4 @@
+import packageInfo from '../../../../package.json'
 import * as React from 'react'
 import { useReducer } from 'react'
 
@@ -20,7 +21,9 @@ const reducer = (state, action) =>{
 
 const SettingsContextProvider = ({ children, ...props }) => {
   const [state, dispatch] = useReducer(reducer, {
-    color:'blue'
+    color         :'blue',
+    secondaryColor:'gray',
+    remoteHost    :'https://resume.adrianv.net'
   })
 
   const setSettings = (payload) => {
@@ -30,11 +33,18 @@ const SettingsContextProvider = ({ children, ...props }) => {
       payload, //'sidebar', 'main'
     })
   }
+
+  const {
+    version,
+    name
+  } = packageInfo
   //
   return (
     <SettingsContext.Provider
       value={{
         ...state,
+        version,
+        name,
         ...props,
         setSettings
       }}

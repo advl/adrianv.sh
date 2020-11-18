@@ -5,6 +5,8 @@ import { Text, Box, useApp, useStdout } from 'ink'
 
 import * as figures from 'figures'
 
+import open from 'open'
+
 import { 
   Page,
   ColorSelectInput,
@@ -32,16 +34,20 @@ const Main = (props) => {
 
   const items = [
     {
-      label:'See picture',
-      value:'/picture'
-    },
-    {
       label:'Change colors',
       value:'/colors'
     },
     {
+      label:'See picture',
+      value:'/picture'
+    },
+    {
       label:'Source',
       value:'/source'
+    },
+    {
+      label:'See photography website (opens in default browser)',
+      value:'https://779.mx'
     },
     {
       label:`${figures.arrowLeft} Never mind. (Return to main menu)`,
@@ -54,6 +60,8 @@ const Main = (props) => {
       history.push(item.value)
     } else if (item.value.startsWith('~')) {
       history.goBack()
+    } else if (item.value.startsWith('http')) {
+      open(item.value)
     } else {
       setSettings({
         color   :item.value,

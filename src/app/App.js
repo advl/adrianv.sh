@@ -14,6 +14,9 @@ import {
 } from 'react-router'
 
 import {
+  DownloadResumePage,
+  DownloadPDFPage,
+  ContactPage,
   HomePage,
   EducationMainPage,
   ExperienceMainPage,
@@ -111,6 +114,24 @@ export default (props) => {
           exact
         >
           <OSSPage/>
+        </Route>
+        <Route
+          path='/contact'
+          exact
+        >
+          <ContactPage/>
+        </Route>
+        <Route
+          path='/downloadresume'
+          exact
+        >
+          <DownloadResumePage/>
+        </Route>
+        <Route
+          path='/downloadpdf'
+          exact
+        >
+          <DownloadPDFPage/>
         </Route>
         <Route
           path='/misc'
