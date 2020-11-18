@@ -128,6 +128,13 @@ const DownloadPDF = (props) => {
   }, [downloadMode])
 
   useInput((input, key) => {
+    if (!downloadMode && !confirmNewDirMode && key.escape) {
+      history.push('/downloadresume')
+      // Exit program
+    }
+    if (!downloadMode && confirmNewDirMode && key.escape) {
+      setConfirmNewDirMode(false)
+    }
     if (downloadMode && key.return) {
       history.push('/')
       // Exit program
@@ -166,6 +173,11 @@ const DownloadPDF = (props) => {
                   <Newline count={2}/>
                 </Text>
               }
+              <Newline count={2}/>
+              You have choosen format
+              {' '}
+              <Text bold>{ location.state?.format?.toUpperCase() }</Text>
+              <Newline count='2'/>
               <ColoredText bold>
             In which folder do you want to download the pdf resume ?
                 {' '}
@@ -175,26 +187,44 @@ const DownloadPDF = (props) => {
                 onChange={setDirname}
                 onSubmit={ submitDirname }
               />
+              <Newline count={2}/>
+              <Text>(Or press ESC to cancel)</Text>
+              <Newline count={1}/>
             </Text>
 
           </Box> :
-          <Box>
-            <ColoredText bold>
+          <>
+            <Box
+              paddingX={3}
+              width={ 90 }
+              marginBottom={2}
+            >
+              <ColoredText bold>
                 The directory 
-              {' '}
-              {dirname}
-              {' '}
+                {' '}
+                {dirname}
+                {' '}
               
 does not exist. Create it ? (Y/n)
-              {' '}
-            </ColoredText>
-            <ConfirmInput
-              defaultValue={ true }
-              value={ confirmNewDirValue }
-              onChange={ setConfirmNewDirValue }
-              onSubmit={ submitConfirmNewDir }
-            />
-          </Box>
+                {' '}
+              </ColoredText>
+              <ConfirmInput
+                defaultValue={ true }
+                value={ confirmNewDirValue }
+                onChange={ setConfirmNewDirValue }
+                onSubmit={ submitConfirmNewDir }
+              />
+            </Box>
+            <Box
+              paddingX={3}
+              width={90}
+            >
+              <Text>
+(Or press ESC to cancel)
+                <Newline count={1}/>
+              </Text>
+            </Box>
+          </>
 
         :
         <>
@@ -231,7 +261,7 @@ does not exist. Create it ? (Y/n)
             </Box>
             <Box width={86}>
               <Text bold>
-                { location.state?.format }
+                { location.state?.format?.toUpperCase() }
               </Text>
             </Box>
           </Box>
