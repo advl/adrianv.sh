@@ -77,7 +77,7 @@ const DownloadResume = (props) => {
         <ColoredTitle
           font='grid'
         >
-          Download Area
+          Download Zone
         </ColoredTitle>
       </Box>
 

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useMemo, useCallback, useState, useEffect } from 'react'
 
-import { Text, Box, useApp, useStdin, useInput } from 'ink'
+import { Text, Box, useApp, useStdin, useInput, Newline } from 'ink'
 
 import open from 'open'
 import path from 'path'
@@ -87,8 +87,8 @@ const DownloadPDF = (props) => {
         fs.mkdirSync(dirname, { recursive: true })
         setDownloadMode(true)
       } catch(e) {
-        if(e.syscall === 'mkdir' && e.code === 'EACCESS') {
-          setError(`Permission error while trying to create directory '${dirname}'. You can avoid this error by running this program with higher permissions (if you're a 'chmod 0777' kind of person) or by simply choosing another directory for the download.`)
+        if(e.syscall === 'mkdir' && e.code === 'EACCES') {
+          setError(`Permission error while trying to create directory '${dirname}'. You can avoid this error by running this program with higher permissions (if you're a 'chmod 777' kind of person) or by simply choosing another directory for the download.`)
         } else {
           setError(JSON.stringify(e))
         }
@@ -148,27 +148,31 @@ const DownloadPDF = (props) => {
         key={ 'title' }
       >
         <ColoredTitle
-          font='grid'
+          font='simple3d'
         >
-          PDF
+          download
         </ColoredTitle>
       </Box>
       { !downloadMode ?
         !confirmNewDirMode ? 
-          <Box>
-            <Box marginRight={1}>
+          <Box width='90'>
+            <Text>
+              { error && 
+                <Text color='red'>
+                  { error }
+                  <Newline count={2}/>
+                </Text>
+              }
               <ColoredText bold>
-            Where do you want to download the file ?
+            In which folder do you want to download the pdf resume ?
+                {' '}
               </ColoredText>
-              <Text>
-                { JSON.stringify(error, null, 2) }
-              </Text>
-            </Box>
-            <TextInput
-              value={dirname}
-              onChange={setDirname}
-              onSubmit={ submitDirname }
-            />
+              <TextInput
+                value={dirname}
+                onChange={setDirname}
+                onSubmit={ submitDirname }
+              />
+            </Text>
 
           </Box> :
           <Box>
@@ -306,7 +310,6 @@ does not exist. Create it ? (Y/n)
             <ColoredText bold>
               Press ENTER to return to the main menu
               { downloadSuccess && ' or press O to open pdf in browser.' }
-.
             </ColoredText>
           </Box>
           }
