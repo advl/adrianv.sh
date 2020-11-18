@@ -88,7 +88,7 @@ const DownloadPDF = (props) => {
         setDownloadMode(true)
       } catch(e) {
         if(e.syscall === 'mkdir' && e.code === 'EACCES') {
-          setError(`Permission error while trying to create directory '${dirname}'. You can avoid this error by running this program with higher permissions (if you're a 'chmod 777' kind of person) or by simply choosing another directory for the download.`)
+          setError(`Permission error while trying to create directory '${dirname}'. You can avoid this error by running this program with higher permissions (if you're the 'chmod 777' kind of person) or by simply choosing another directory for the download.`)
         } else {
           setError(JSON.stringify(e))
         }
