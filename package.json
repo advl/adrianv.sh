@@ -8,7 +8,7 @@
 	},
 	"scripts": {
 		"prepublish": "npm run build",
-		"start": "babel-node src/main.js",
+		"start": "babel-node src/main.js --stack-trace-limit=1000",
 		"build": "webpack --config ./webpack.js",
 		"test-eslint": "eslint ui.js",
 		"test": "xo && ava"
@@ -23,12 +23,17 @@
 		"import-jsx": "^4.0.0",
 		"ink": "^3.0.8",
 		"ink-big-text": "^1.2.0",
+		"ink-confirm-input": "^2.0.0",
 		"ink-gradient": "^2.0.0",
 		"ink-link": "^2.0.0",
+		"ink-progress-bar": "^3.0.0",
 		"ink-select-input": "^4.2.0",
+		"ink-spinner": "^4.0.1",
+		"ink-text-input": "^4.0.1",
 		"meow": "^8.0.0",
 		"open": "^7.3.0",
 		"path-to-regexp": "^6.2.0",
+		"query-string": "^6.13.7",
 		"react": "^17.0.1",
 		"react-router": "^5.2.0",
 		"universal-analytics": "^0.4.23"
