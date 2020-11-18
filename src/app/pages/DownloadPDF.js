@@ -155,7 +155,10 @@ const DownloadPDF = (props) => {
       </Box>
       { !downloadMode ?
         !confirmNewDirMode ? 
-          <Box width='90'>
+          <Box
+            width='90'
+            paddingX={3}
+          >
             <Text>
               { error && 
                 <Text color='red'>
@@ -176,13 +179,15 @@ const DownloadPDF = (props) => {
 
           </Box> :
           <Box>
-            <Text>
+            <ColoredText bold>
                 The directory 
               {' '}
               {dirname}
               {' '}
+              
 does not exist. Create it ? (Y/n)
-            </Text>
+              {' '}
+            </ColoredText>
             <ConfirmInput
               defaultValue={ true }
               value={ confirmNewDirValue }
