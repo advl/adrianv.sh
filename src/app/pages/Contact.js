@@ -46,7 +46,7 @@ const Contact = (props) => {
     },
     {
       label:'Dowload my resume',
-      value:'/downloadpdf'
+      value:'/downloadresume'
     },
     {
       label:`${figures.arrowLeft} Noted, thanks ! (Return to the Main Menu)`,
