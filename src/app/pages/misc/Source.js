@@ -102,6 +102,7 @@ const Main = (props) => {
       >
         <ColoredText bold>~~~ source ~~~</ColoredText>
       </Box>
+
       <Box
         alignItems="flex-start"
         paddingX={3}
@@ -163,6 +164,7 @@ Compilation :
 . All the world of back-end node npm packages can be used in this sort of application.
         </Text>
       </Box>
+
       <Box
         alignItems="flex-start"
         paddingX={3}
@@ -224,6 +226,7 @@ for his OSS work, in particular his ink components, such as `ink-big-text`, `ink
 
         </Text>
       </Box>
+
       <Box
         alignItems="flex-start"
         paddingX={3}
@@ -262,7 +265,7 @@ and feel free to fork this project to modify the source code in the way you see 
         <ColoredText bold>
 ~~~ Thank you for browsing
           {' '}
-          {packageInfo.name}
+          {name}
           {' '}
 ~~~
         </ColoredText>
