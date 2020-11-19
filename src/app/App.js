@@ -23,6 +23,7 @@ import {
   MiscMainPage,
   PhotoPage,
   SourcePage,
+  SkillsPage,
   TestPage,
   OSSPage,
   ColorChoicePage,
@@ -114,6 +115,12 @@ export default (props) => {
           exact
         >
           <OSSPage/>
+        </Route>
+        <Route
+          path='/hire'
+          exact
+        >
+          <SkillsPage />
         </Route>
         <Route
           path='/contact'

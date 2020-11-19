@@ -33,12 +33,12 @@ const Contact = (props) => {
 
   const items = [
     {
-      label:'Open my Github in default browser.',
-      value:'https://github.com/advl'
-    },
-    {
       label:'Send me an email (opens mail client though default browser)',
       value:'mailto:adrian@779.mx?subject=Contact from the terminal'
+    },
+    {
+      label:'Open my Github in default browser.',
+      value:'https://github.com/advl'
     },
     {
       label:'Open LinkedIn profile in default browser.',

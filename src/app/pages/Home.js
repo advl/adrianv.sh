@@ -48,6 +48,10 @@ const Home = (props) => {
       value:'/oss'
     },
     {
+      label:'Hire me',
+      value:'/hire'
+    },
+    {
       label:'Contact',
       value:'/contact'
     },
@@ -119,7 +123,7 @@ Welcome
           In other words, I am looking for a new job. 
           </Text>
           <Newline count={2}/>
-          The terminal is my favourite digital tool, so I made this experimental little program in a couple days, as an creative way to introduce myself, by presenting my experience and work in an interactive way.
+          The terminal is my favourite digital tool, so I made this experimental little program in a couple days, as an creative way to introduce myself, to presenting my experience and work in an interactive fashion.
           <Newline count={2}/>
           <Newline/>
           Also, you can download a more classic, PDF version of my resume, in both A4 and Letter format,  under the
