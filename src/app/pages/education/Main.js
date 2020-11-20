@@ -224,11 +224,11 @@ Data Mining and Extraction (STATS202)
           <Newline count={2}/>
           I am a self-taught progremmer. I started programming for the web at age 7, in 1999. I used Microsoft Front Page, which was included in Microsoft Office at that time. 
           <Newline count={2}/>
-          At age 12, I was an editor on yazerty.net, on the DotClear platform, with more than 2k daily visitors. I started teenage-blogging at age 14 on Wordpress, and more than taking pride on my writing, this made me be in the first loop of the news cycle, be in the first wave to understand the tech and its evolutions, become more familiar with the tech world.
+          At age 12, I was an editor on yazerty.net, on the DotClear platform, with more than 2k daily visitors. I started teenage-blogging at age 14 on Wordpress, and while I don't really take pride in my writing, this made me be in the first loop of the news cycle, be in the first wave to understand the tech and its evolutions.
           <Newline count={2}/>
           I created my first Twitter account in 2007 (which I deleted shortly thereafter for it being, in my eyes, shallow and unnecessarily competitive). I much preferred exchanging ideas and opinions on Pownce, which sadly died long ago.
           <Newline count={2}/>
-          I used the Macromedia Dreamweaver workhose (anyone ?) to achieve my theming and customization goals, which helped me become more familiar with the workings of the DOM, PHP, MySQL, and jQuery (which was some sort of tiny micracle). 
+          At that time I used the Macromedia Dreamweaver workhose (anyone ?) to achieve my theming and customization goals. I slowly got more familiar with the workings of the DOM, PHP, MySQL, and jQuery through a lot of Wordpress theming. 
           <Newline count={2}/
           >
           I didn't program much until I got to business school in 2013 (see
@@ -239,7 +239,7 @@ Data Mining and Extraction (STATS202)
           {' '}
           section), when I decided to update my coding skills. I started working with UNIX system and POSIX terminals, using Debian and Django, Postgres for back-end systems while doing the coding in SublimeText+Plugins.
           <Newline count={2}/>
-          Next thing I know, I left the possbility of being an economist for the Mexican government (2018) and decided to go back to coding again. This time I went for the modern React/GraphQL/Serverless stack and here we are ! 
+          Next thing I know, I left the possbility of becoming a public servant for the Mexican Government and to start coding again. This time I went for the modern React/GraphQL/Serverless stack and here we are !
         </Text>
         
       </Box>}
