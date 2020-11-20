@@ -141,7 +141,7 @@ menu entry.
           >
             { figures.warning }
             {' '}
-Please consider this program experimental. While I have toroughly tested it in my st/zsh terminal and the default ttys of my Linux machine, some terminals might fail to render some sections of it, and/or quit unexpectedly.
+Please consider this program experimental. While I have toroughly tested it in my st/zsh terminal and the default ttys of my Linux machine, some terminals might fail to render some sections of it, and/or quit unexpectedly. Also, I recommend you run this program in a fullscreen terminal. Some parts of it might break if you're running this in a tiny window.
           </Text>
           <Newline count={2}/>
           If you like it here, if you would like to get in touch and maybe discuss an employment possibility with me, you can send me an email at
