@@ -44,7 +44,7 @@ export default (props) => {
 
   return(
     <>
-      <Text>{location.pathname}</Text>
+      {/*}<Text>{location.pathname}</Text>*/}
       <Switch>
         <Route
           path='/'
