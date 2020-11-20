@@ -37,16 +37,16 @@ const Contact = (props) => {
       value:'mailto:adrian@779.mx?subject=Contact from the terminal'
     },
     {
+      label:'Dowload a PDF version of my resume',
+      value:'/downloadresume'
+    },
+    {
       label:'Open my Github in default browser.',
       value:'https://github.com/advl'
     },
     {
       label:'Open LinkedIn profile in default browser.',
       value:'https://linkedin.com/in/villaadrian'
-    },
-    {
-      label:'Dowload my resume',
-      value:'/downloadresume'
     },
     {
       label:`${figures.arrowLeft} Noted, thanks ! (Return to the Main Menu)`,

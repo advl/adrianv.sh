@@ -86,6 +86,8 @@ const Contact = (props) => {
           {' '}
 (November 2020). I would be honored to join a fast-paced, creative, experienced team, to deliver quality code and contribute to building impactful products.
           <Newline count={2}/>
+          I strive on implementing consistent, comprehensive quality practices in my coding, such as SVN, Linting, Testing, Auditing, group code reviews to ensure high quality throughput and delivery in the context of agile product delivery. Also I always keep an eye on the possibility of new patterns and code design principles.
+          <Newline count={2}/>
           My workflow : I usually plan ahead and time-budget the work to execute, if working within a tech team I like to apply the agile methodology. While I really appreciate GUI progamming tools, like the SublimeText ecosystem, I do 99% of my work through the terminal. I run 
           {' '}
           <Text italic>Vim</Text>

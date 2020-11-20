@@ -4,12 +4,21 @@ My resume as a CLI.
 
 ## Run
 
+Run remotely
 ```bash
 $ npx adrianv.sh
 ```
 
+Run locally
+```
+git clone ....
+npm i
+npm run start
+```
+
 ## CLI
 
+<!----
 ```
 $ adrianv.sh --help
 
@@ -22,7 +31,9 @@ $ adrianv.sh --help
   Examples
     $ adrianv.sh --name=Jane
     Hello, Jane
+
 ```
+--->
 
 ## VIM Settings
 

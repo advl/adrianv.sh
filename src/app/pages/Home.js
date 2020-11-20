@@ -43,10 +43,11 @@ const Home = (props) => {
       label:'Education',
       value:'/education'
     },
+    /*
     {
       label:'Open Source Projects',
       value:'/oss'
-    },
+    },*/
     {
       label:'Hire me',
       value:'/hire'

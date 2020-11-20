@@ -46,52 +46,6 @@ export default (props) => {
     <>
       <Text>{location.pathname}</Text>
       <Switch>
-        {/*
-        <Route
-          path='/'
-          exact
-        >
-          <Box
-            borderStyle='round'
-            padding='2'
-            borderColor='green'
-            width='25'
-          >
-            <Text>
-              <Text bold>
-      Welcome and thank you for running the cutting-edge
-              </Text>
-              {' '}
-              <Text
-                bold
-                color='red'
-              >
-        adrianv.sh
-              </Text>
-              {
-                ' v.'
-              }
-              <Text
-                bold
-                color='blue'
-              >
-                { packageInfo.version }
-              </Text>
-.
-              <Newline count={3}/>
-              <Text>
-                Pleased to meet you,
-                {' '}
-                <Text bold>I am Adrian</Text>
-.
-                <Newline count={2}/>
-                I am a full-stack web developper currently looking for a job.
-              </Text>
-            </Text>
-          </Box>
-
-        </Route>
-      */}
         <Route
           path='/'
           exact
@@ -110,12 +64,14 @@ export default (props) => {
         >
           <ExperienceMainPage/>
         </Route>
+        {/*
         <Route
           path='/oss'
           exact
         >
           <OSSPage/>
         </Route>
+        */}
         <Route
           path='/hire'
           exact
