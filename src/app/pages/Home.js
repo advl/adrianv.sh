@@ -124,7 +124,7 @@ Welcome
           In other words, I am looking for a new job. 
           </Text>
           <Newline count={2}/>
-          The terminal is my favourite digital tool, so I made this experimental little program in a couple days, as an creative way to introduce myself, to presenting my experience and work in an interactive fashion.
+          The terminal is my favourite digital tool, so I made this experimental little program in a couple days, as an creative way to introduce myself, to present my experience and work in an interactive fashion.
           <Newline count={2}/>
           <Newline/>
           Also, you can download a more classic, PDF version of my resume, in both A4 and Letter format,  under the
@@ -141,7 +141,7 @@ menu entry.
           >
             { figures.warning }
             {' '}
-Please consider this program experimental. While I have toroughly tested it in my st/zsh terminal and the default ttys of my Linux machine, some terminals might fail to render some sections of it, and/or quit unexpectedly. Also, I recommend you run this program in a fullscreen terminal. Some parts of it might break if you're running this in a tiny window.
+Please consider this program experimental. While I have thoroughly tested it in my st/zsh terminal and the default ttys of my Linux machine, some terminals might fail to render some sections of it, and/or quit unexpectedly. Also, I recommend you run this program in a fullscreen terminal. Some parts of it might break if you're running this in a tiny window.
           </Text>
           <Newline count={2}/>
           If you like it here, if you would like to get in touch and maybe discuss an employment offer with me, you can send me an email at
@@ -158,7 +158,7 @@ Also, you can find more detailed Contact information under the
           {' '}
 section of the program.
           <Newline count={2}/>
-          <Text>I hope you ejoy your quirky, glitchy stay here. </Text>
+          <Text>I hope you enjoy your quirky, glitchy stay here. </Text>
           <Newline count={2}/>
           <Text bold>Thank you for hanging around and for taking the time to read me !</Text>
           <Newline/>
