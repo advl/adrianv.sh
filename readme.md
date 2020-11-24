@@ -10,7 +10,7 @@ $ npx adrianv.sh
 
 ## Run locally
 ```
-git clone ....
+git clone git@github.com:advl/adrianv.sh.git
 npm i
 npm run start
 ```
