@@ -95,6 +95,20 @@ const Home = (props) => {
         justifyContent='center'
         key={ 'source' }
       >
+        <ColoredText>
+          {`
+          |
+        \\ _ /
+      -= (_) =-
+        /   \\         _\\/_
+          |           //o\\  _\\/_
+   _____ _ __ __ ____ _ | __/o\\\\ _
+ =-=-_-__=_-= _=_=-=_,-'|"'""-|-,_
+  =- _=-=- -_=-=_,-"          |
+-=- =- =- -=.--"
+        `}
+          <Newline count={2}></Newline>
+        </ColoredText>
         <ColoredText bold>{ title }</ColoredText>
       </Box>
       <Box
