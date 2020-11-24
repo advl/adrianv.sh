@@ -2,7 +2,7 @@
 
 ![adrianv.sh](https://i.imgur.com/JosdwTe.gif)
 
-My resume as a CLI.
+Get to know me in your terminal 👇
 
 ```bash
 $ npx adrianv.sh
